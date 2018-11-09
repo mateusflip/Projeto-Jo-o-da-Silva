@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Formulário</title>
+    <link rel="icon" href="imagens/favicon.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/bio.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
+</head>
+<body>
+  <form>
+    <fieldset> <!--Tag que agrupa todos os elementos que desejo, neste caso vai do campo nome até email-->
+<legend><strong>Dados pessoais</strong></legend>
+    <label for="nome">Nome:</label> <!-- for é o nome que damos para a tag label, que deve ser a mesma do input, para que o navegador possa reconhecer os campos -->
+    <input id="nome" placeholder="Digite seu nome" required autofocus pattern="[A-Za-z-0-9]{8,}" title="Preencha com pelo menos oito caractres"> <!-- o que tiver o for com escrito "nome" será preenchido aqui pattern coloca os caracteres que podem ser preenchidos neste campo obs:está em chaves, entre colchetes é a quantidade minima de caractares que o campo aceita-->
+   <label for="email">E-mail</label>
+   <input id="email" type="email" placeholder="Digite seu e-mail" required> <!-- type email faz a validação que o que está sendo enviado seja realmente um e-mail, required diz que o campo é obrigatorio e tem que ser preenchido-->
+</fieldset>
+<fieldset>
+<legend>Escolha uma opção</legend>
+   <label for="consultoria"> Consultoria </label>
+   <input type="radio" name="assunto"> <!-- o tributo name faz com que somente um radio button possa ser selecionado, por isso o nome do atributo name deve ser igual para todos os radio buttons destá opção-->
+
+   <label for="Blog">Blog</label>
+   <input type="radio"  name="assunto">
+
+  <label for="outros"> Outros </label>
+  <input type="radio" name="assunto">
+
+</fieldset>
+<label for="msg">Mensagem</label>
+  <textarea id="msg" name="mensagem" rows="8" cols="30"></textarea> <!-- cols= largura medida em colunas rows= grossura medida em linhas -->
+<button type="submit" name="botao">Enviar</button>
+  </form>
+</body>

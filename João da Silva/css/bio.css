@@ -1,0 +1,133 @@
+h1{
+  -webkit-animation: aparece 3s ease-in; /* segundos é o tempo que demora para executar todo o processo, ease in para suavizar no começo*/
+  animation: aparece 3s ease-in;
+  }
+  @keyframes aparece { /*é necessário usar keyframe para executar a animação*/
+    0%{ /*aqui inicia o comando que estamos dando para "aparece"*/
+opacity: 0; /*inicia com a opacidade em 0*/
+    }
+    100%{ /*Aqui são todas as características que devem ser executadas até o final*/
+opacity: 1; /*termina com a opacidade em 1*/
+    }
+  }
+  @-webkit-keyframes aparece { /*webkit é para que o chrome consiga executar*/
+    0%{ /*aqui inicia o comando que estamos dando para "aparece"*/
+opacity: 0; /*inicia com a opacidade em 0*/
+    }
+    100%{ /*Aqui são todas as características que devem ser executadas até o final*/
+opacity: 1; /*termina com a opacidade em 1*/
+    }
+  }
+  .citacao-bio {
+    background-color: #D9E5E3;
+    border: .5em solid #C2CCCA;
+    padding: 1em; /*medida em toma o valor como parametro definido em body*/
+    margin: 1em 1em;
+    width: 30ch; /*usa como parametro a largura do caractere 0, entao 30ch equiavle a medida de 30 zeros*/
+    box-sizing: border-box;
+    transition: transform 1s, box-shadow 3s; /*Aqui colocamos uma animção que será totalmente executada durante um período de 1 segundo, o box shadow irá ser exutado totalmente em três segundos*/
+    transition-delay: 0s, 1s; /*Aqui definimos quando cada ação da animação ira iniciar, a primeira irá iniciar instantaneamente, a segunda após 1 segundo*/
+}
+.citacao-bio:hover, .citacao-bio:focus{
+  box-shadow: 0 0 0 99999px rgba(0,0,0,.8); /*código que faz com que toda a tela fique escura quando passamos o mouse em cima do blockquote*/
+}
+.citacao-bio:nth-of-type(odd):hover, .citacao-bio:nth-of-type(odd):focus{ /*gira e coloca sombra em todos os blackquotes impares*/
+  transform: scale(1.2) rotate(5deg);
+}
+.citacao-bio:nth-of-type(even):hover, .citacao-bio:nth-of-type(even):focus{
+  transform: scale(1.2) rotate(-5deg);
+}
+
+blockquote:nth-of-type(odd) { /*seleciona todos os blockquotes que forem ímpares*/
+    float: left;
+    margin-left: 0;
+}
+blockquote:nth-of-type(odd):hover{ /*faz com que toda vez que passar o mouse em cima os blockquotes girem cinco graus para a direita*/
+  transform: rotate(5deg);
+}
+
+blockquote:nth-of-type(even) { /*seleciona todos os blockquotes que forem pares*/
+    float: right;
+    margin-right: 0;
+  }
+  blockquote:nth-of-type(even):hover{ /*faz com que toda vez que passar o mouse em cima do blockquote ele vai girar 5 graus par a esquerda*/
+    transform: rotate(-5deg);
+  }
+.navegacao-site a:focus, .navegacao-site a:hover{ /* focus e hover combinados dão um efeito de sombreamento no link quando passamos o mouse em cima*/
+    text-shadow: 0 0 10px silver; /*o sombreamento nao se desloca e tem uma itensidade de 10px, a cor da sombra é prata*/
+}
+.container > p::first-letter{/*está pegando todos os parágrafos mas excluindo os das citações*/
+  font-size: 200%;
+  color: #3C1D3D;
+  font-weight: bold; /*aqui escolhemos o estlo que queremos para a fonte, neste caso em negrito*/
+  text-shadow: 1px 1px #000; /*background de fundo*/
+  line-height: 1; /*ajusta o espaçamento do paragrafo que ele ocupa quando atribuido, pois sem isso ele fica com um maior espaçamento se comparado com todo o elemento*/
+  margin-right: .2ch;
+}
+.citacao-bio::before{
+  content: '"'; /*esse é o conteúdo que será mostrado para o usuário*/
+  position: absolute;
+  font-size: 10em; /*tamanho que a fonte terá*/
+  color: #bbb;
+  line-height: 0.8; /*faz com que o elemento fique no topo da caixa de citação*/
+}
+.citacao-bio > p {
+  position: relative; /*faz com que o conteúdo vá parar no fundo do elemento*/
+}
+
+.icones-redes-sociais a {
+    position: relative;
+}
+/*exercicio 5 da aula 9 REVISAR*/
+.icones-redes-sociais a:hover::after,
+.icones-redes-sociais a:focus::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    text-indent: 0;
+    width: 300%;
+    background: black;
+    font-size: .75em;
+}
+.icones-redes-sociais a:hover::before,
+.icones-redes-sociais a:focus::before {
+    content: '';
+    width: 1em;
+    height: 1em;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(.5em) rotate(45deg);
+}
+
+.habilidades th{ /*Aqui modificamos somente as tags que colocamos como cabeçalho*/
+  font-weight: bold;
+  background-color: #851944;
+  color: white;
+}
+
+.habilidades thead th{
+  background-color: #3C1D3D;
+}
+.habilidades td{
+  border-collapse: separate;
+  border-spacing: 0.25em;
+  background-color: #EEE;
+}
+.habilidades td, .habilidades th{
+  padding: 1em; /*Definição do espaçamento interno da celula*/
+}
+.habilidades{
+  border-collapse: separate;
+  border-spacing: 0.25em;
+  margin: 1em 0;
+}
+.habilidades [colspan]{ /*alinha o texto horizontalmente no centro*/
+  font-style: italic;
+  text-align: center;
+}
+.habilidades [rowspan]{
+  vertical-align: middle; /*Alinha o texto verticalmente ao centro*/
+}

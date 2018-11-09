@@ -1,0 +1,33 @@
+.leia-mais {
+  padding: .5em;
+  margin: 1em;
+  display: block;
+  font-size: 1.5em;
+  text-align: center;
+  background-color: #E6E7E8;
+}
+
+.post-blog+.post-blog {
+  /*seleciona todos os elementos a partir do segundo*/
+  padding-top: 1em;
+  margin-top: 1.5em;
+  background-image: linear-gradient(to right, transparent, black, transparent);
+  /*o gradiente começa da esquerda transparente com a cor preta e transparente novamente*/
+  background-size: 100% 1px;
+  /*ocupa 100% de largura e 1px de espessura (altura)*/
+  background-repeat: no-repeat;
+  /*Elemento nao vai se repetir*/
+  background-position: top center;
+  /*indica que está no topo do elemento e no centro*/
+}
+
+/*ainda existe a faixa de rodapé que não acompanha o footer, ver um jeito de remove-la*/
+
+.rodape-pagina {
+ /* background-image: radial-gradient(ellipse at left bottom, rgba(60, 29, 61, 0.8), rgba(60, 29, 61, 0.8) 65%, black 65%, black 70%, transparent 70%, transparent);*/
+  width: 100%;
+  background-size: 25% 100%;
+  background-repeat: no-repeat;
+}
+
+/*  margin-bottom: 20px; faz com que tenha uma linah que separe os posts, a grossura desta linha é de 20px* /

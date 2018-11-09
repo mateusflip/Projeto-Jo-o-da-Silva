@@ -1,0 +1,348 @@
+.blog{
+  background-image: linear-gradient(54deg, transparent, /*se movimento 54 graus para a esquerda*/
+                        transparent 14px,
+                        rgba(255, 255, 255, 0.1) 14px,
+                        rgba(255, 255, 255, 0.1) 15px,
+                        transparent 15px,
+                        transparent);;
+background-size: 20px 20px;
+background-attachment: fixed; /*fixa o elemento fazendo com que ele nao se mova quando rolamos a página*/
+}
+.trabalhos{
+  background-image: linear-gradient(135deg, transparent, /*se movimento 135 graus para a direita*/
+                        transparent 14px,
+                        rgba(0, 0, 0, 0.1) 14px,
+                        rgba(0, 0, 0, 0.1) 15px,
+                        transparent 15px,
+                        transparent);;
+background-size: 20px 20px;
+background-attachment: fixed; /*fixa o elemento fazendo com que ele nao se mova quando rolamos a página*/
+}
+/*.titulo-principal*/
+/*  background-image: linear-gradient(to bottom, #F00, #888 80%, #000);*/ /*to bottom indica que o gradiente começa de cima para baixo*/
+/*background-size: 100% 200px;*/ /*a largura do background ocupa 100%, mas o tamanho (espessura) ocupa somente 200px*/
+/*background-repeat: no-repeat;*/ /*faz com que assim que acabe o tamamho da largura o gradiente não se reepita, mas sim continue o vem depois dele*/
+/*ver um modo de quando o hover for acionado não modificar a posição da caixa que aparece o texto;*/
+  .acessivel{
+    display: none;
+    position: absolute;
+    top: 5em;
+    left: 30%;
+    right: 4em;
+    height: 8em;
+    background-color: #F2FFFC;
+    color: #000;
+    padding: 1.5em;
+    display: none;
+  }
+.inicio-post{
+  display: none;
+  background-color: #FFF; /*FFF é a sigla para a cor branca*/
+  position: absolute; /*Ele usa como referencia o primeiro pai ou position definido, neste caso ele está usando como referencia o posicionamento da classe .blog*/
+  color: black;
+  top: 5em;
+  right: 4em;
+  height: 3em; /*height é a tag que define altura do elemento*/
+padding: 1.5em;
+}
+.blog a:hover + .inicio-post,
+.blog a:focus + .inicio-post {
+    display: block;
+  }
+  .blog a:hover + .acessivel,
+  .blog a:focus + .acessivel {
+      display: block;
+    }
+  .blog a:hover,
+  .blog a:focus{
+    background-color: #F2FFFC;
+    color: #F26;
+  }
+.tamanho{
+  font-size: 1px;
+}
+h1{
+  text-shadow: 2px /*texto deslocado para a direita*/ 2px /*deslocado para baixo*/ #000; /* os dois parametros px diz respeito ao posicionamento da sombra, o #000 é a cor da sombra*/
+}
+/* ESTUDAR MELHOR ESTÁ PARTE (AULA 04) (Dar uma estilizada na opacidade delas tbm)
+.banner-twitter {
+    width: 14em;
+    line-height: 1;
+    padding: 1em 0;
+    box-sizing: border-box;
+
+    text-align: center;
+    text-decoration: none;
+    background-color: #3C1D3D;
+    color: white;
+    border: .25em solid black;
+
+    font-size: 1.2em;
+    font-family: "Open Sans Condensed", sans-serif;
+}
+.banner-twitter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform-origin: 0 0;
+    transform: translate(6.5754em, -2.4749em) rotate(45deg);
+}*/
+
+.blog .mais-recente a{
+ 
+   
+}
+.blog li{
+  width: 30%; /*30% pois o height da caixa também é 30%*/
+}
+.foto-home {
+    height: 200px;
+    border-radius: 50%; /*Propriedade que arredonda as bordas da imagem, 50% é o máximo e arredonda tudo*/
+    box-shadow: 0 0 1em #000; /*coloca sombra ao redor de um elemento*/
+}
+.saudacao p {
+    color: #99A;
+    line-height: 1;
+    font-size: 1.5em;
+    line-height: 1;
+    padding: 2em;
+}
+.saudacao-inicio {
+  font-size: 3em;
+    color: #889;
+}
+.saudacao-ultima-linha {
+    text-align: right;
+    display: block;
+}
+.saudacao strong {
+    color: #000;
+}
+.saudacao em {
+  font-size: 4em;
+    color: #851944;
+    position: relative; /*para que a animação funcione é necessário dizer que a posição é relativa (pelo menos nesse caso)*/
+    -webkit-animation: flutua 1s infinite;
+    animation: flutua 1s infinite;
+    animation-direction: alternate; /*faz com que a animação nao quebre bruscamente*/
+    animation-timing-function: ease-in-out; /*faz com que o efeito fique suave e nao quebre repetitivamente*/
+
+}
+.saudacao em:hover{
+  animation-play-state: paused; /*a animação para de forma suave quando passa o mouse por cima*/
+}
+@-webkit-keyframes flutua{
+  0%{
+  top: -5px;
+  }
+  100%{
+    top: 5px;
+  }
+}
+@keyframes flutua{
+  0%{
+  top:  -5px;
+  }
+  100%{
+    top: 5px;
+  }
+}
+.botao-index {
+  font-size: 1.25em;
+     background-color: #851944;
+     color: #FFF;
+     padding: .5em;
+     border: .2em solid black;
+     width: 40ch;
+     margin: 2em auto;
+     display: block;
+     text-align: center;
+/*código que faz o efeito de preenchimento branco dentro dos botões*/
+}
+.botao-index:focus, .botao-index:hover{
+  background-color: #C54974;
+  color: white;
+  box-shadow: 0 0 1em #FA9;
+
+}
+.botao-index{
+  text-decoration: none;
+  transition: .5s;
+}
+.secao-inicio{
+  padding: 2em;
+}
+.secao-inicio h2 {
+    text-transform: uppercase;
+    font-size: 3em;
+    text-shadow: 2px 2px #000;
+    margin-bottom: .5em;
+}
+.trabalhos {
+    background-color: #3C1D3D;
+    border-top: .5em solid #000;
+    border-bottom: .5em solid #000;
+}
+.trabalhos h2 {
+    color: #FFF;
+}
+.trabalhos ul {
+    overflow: hidden;
+    border: .5em solid black;
+}
+.trabalhos li {
+    float: left;
+    width: 33.333%;
+}
+.trabalhos img {
+    width: 100%;
+    display: block;
+}
+.blog {
+    background-color: #999;
+    color: #FFF;
+    border-bottom: .5em solid #851944;
+    position: relative;
+    }
+.blog small{
+position: relative;
+top: -2em;
+
+}
+.blog li a {
+  padding: .5em;
+  display: block;
+    color: #FCF;
+}
+header{
+  position: relative;
+}
+footer {
+    background-color: #000;
+    color: #FFF;
+  padding: 2em;
+}
+footer h2{
+  font-size: 3em;
+}
+footer a {
+    color: #F99;
+}
+main {
+    width: 100%;
+    padding-bottom: 0;
+    float: none;
+}
+.blog .inicio-post {
+    position: absolute;
+    top: 4em;
+    height: 8em;
+    left: 30%;
+    right: 4em;
+    background-color: #F2FFFC;
+    color: #000;
+    padding: 1.5em;
+
+    /*precisa arrumar a zona que está daqui pra baixo*/
+}
+.torcer{
+  display: inline-block; /*precisa colocar isso para que a transformação funcione*/
+  transform: rotate(-5deg)/*rotaciona o texto para a esquerda*/ skew(-10deg/*deforma o texto*/);
+}
+.palavra-home{ /*Aqui são modificadas todas as tags que estão contidas na classe palavra-home*/
+  font-family: shadows into light;
+  color: #D5447E;
+  position: absolute;
+-webkit-animation: aparencia 2s;
+  animation: aparencia 2s; /*animação irá ter uma duração de 2 segundos*/
+}
+@-webkit-keyframes aparencia {
+0%{
+opacity: 0;
+transform:scale(0.001);
+}
+}
+@keyframes aparencia {
+0%{
+opacity: 0;
+transform: scale(0.001); /*faz com que o texto aumente até seu tamanho normal*/
+}
+}
+.eficiencia{
+  top: 5%;
+  left: 75%;
+  -webkit-transform: rotate(-5deg); /*webkit é o pacote de instruções que o googlechrome sabe ler*/
+            transform: rotate(-5deg); /*transform rotate é a tag que modifica o elemento, rotate faz ela rotacionar,  -5deg faz com se incline pa esquerda*/
+}
+.boas-praticas{
+  top: 5%;
+  right: 75%;
+  -webkit-transform: rotate(5deg);
+            transform: rotate(5deg); /*no caso está fazendo a palavra se inclinar 5 graus para a direita*/
+}
+.codigo-limpo{
+  top: 20%;
+  left: 75%;
+  -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+}
+.css3{
+  top: 20%;
+  right: 80%;
+  -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+}
+.html5{
+  top: 68%;
+  left: 75%;
+  -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+}
+.javascript{
+  top: 35%;
+  right: 78%;
+
+  -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+}
+.acessibilidade{
+  top: 38%;
+  left:75%;
+  -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+}
+.responsivo{
+  top: 54%;
+  right: 75%;
+  -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+}
+/*.otimizacoes{
+  top: 54%;
+  left:75%;
+
+  -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+}*/
+.agilidade{
+  top: 70%;
+  right: 75%;
+   /*opacidade de um elemento vai de .0 a 1, quanto maior mais vísivel*/
+  -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+}
+.design{
+  top:52%;
+  left: 75%;
+  -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+}
+main a:hover{ /* todos os links contidos em main ficam com a cor de fundo vermelha devido a pseudoclasse hover*/
+  background-color: red;
+}
+footer a:hover{
+  background-color: red; /* todos os links contidos em footer ficam com a cor de fundo vermelha devido a pseudoclasse hover*/
+}
+navegacao-site a:hover{
+  text-shadow: 0 0 2px pink;
+}
